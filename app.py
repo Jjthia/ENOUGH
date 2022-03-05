@@ -34,7 +34,7 @@ def index():
         
         model1 = joblib.load("CCD_DT")
         pred1 = model1.predict([[income,age,loan]])
-        s1 = "The score of credit card upgrade based on Decision Tree Model is :" + str(pred1)
+        s1 = "Prediction based on Decision Tree Model is :" + str(pred1)
         
         model2 = joblib.load("CCD_XGB")
         pred2 = model2.predict([[income,age,loan]])
@@ -42,15 +42,15 @@ def index():
         
         model3 = joblib.load("CCD_NN")
         pred3 = model3.predict([[income,age,loan]])
-        s3 = "The score of credit card upgrade based on Neural Network Model is :" + str(pred3)
+        s3 = "Prediction based on Neural Network Model is :" + str(pred3)
         
         model4 = joblib.load("CCD_RF")
         pred4 = model4.predict([[income,age,loan]])
-        s4 = "The score of credit card upgrade based on Random Forest Model is :" + str(pred4)
+        s4 = "Prediction based on Random Forest Model is :" + str(pred4)
         
         model5 = joblib.load("CCD_REG")
         pred5 = model5.predict([[income,age,loan]])
-        s5 = "The score of credit card upgrade based on Logistics Regression Model is :" + str(pred5)
+        s5 = "Prediction based on Logistics Regression Model is :" + str(pred5)
        
         return(render_template("index.html",result1= s1, result2=s2, result3=s3, result4=s4, result5=s5))
     else:
