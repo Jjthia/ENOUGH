@@ -38,7 +38,7 @@ def index():
         
         model2 = joblib.load("CCD_XGB")
         pred2 = model2.predict([[income,age,loan]])
-        s2 = "The score of credit card upgrade based on Gradient Boosting Model is :" + str(pred2)
+        s2 = "Prediction based on Gradient Boosting Model is :" + str(pred2)
         
         model3 = joblib.load("CCD_NN")
         pred3 = model3.predict([[income,age,loan]])
