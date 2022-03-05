@@ -32,23 +32,23 @@ def index():
         print(income,age,loan)
         
         
-        model1 = joblib.load("CCD DT")
+        model1 = joblib.load("CCD_DT")
         pred1 = model1.predict([[income,age,loan]])
         s1 = "The score of credit card upgrade based on Decision Tree Model is :" + str(pred1)
         
-        model2 = joblib.load("CCD XG")
+        model2 = joblib.load("CCD_XGB")
         pred2 = model2.predict([[income,age,loan]])
         s2 = "The score of credit card upgrade based on Gradient Boosting Model is :" + str(pred2)
         
-        model3 = joblib.load("CCD NN")
+        model3 = joblib.load("CCD_NN")
         pred3 = model3.predict([[income,age,loan]])
         s3 = "The score of credit card upgrade based on Neural Network Model is :" + str(pred3)
         
-        model4 = joblib.load("CCD RF")
+        model4 = joblib.load("CCD_RF")
         pred4 = model4.predict([[income,age,loan]])
         s4 = "The score of credit card upgrade based on Random Forest Model is :" + str(pred4)
         
-        model5 = joblib.load("CCD LR")
+        model5 = joblib.load("CCD_REG")
         pred5 = model5.predict([[income,age,loan]])
         s5 = "The score of credit card upgrade based on Logistics Regression Model is :" + str(pred5)
        
